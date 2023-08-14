@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AWS Cloud Practitioner Exam Preparation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9e5f1;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: #f5d9d9;
+            color: #800505;
+            text-align: center;
+            padding: 1rem;
+        }
+        #resources-container {
+            text-align: center;
+            padding: 2rem;
+        }
+        #resources {
+            text-align: left;
+            padding: 2rem;
+        }
+        .resource-link {
+            display: block;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            color: #0c6477;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>AWS Cloud Practitioner Exam Preparation</h1>
+    </div>
+    <div id="resources-container">
+        <h2>Recommended Resources:</h2>
+        <div id="resources"></div>
+    </div>
+    <script>
+        const examResources = [
+            { title: "AWS Certified Cloud Practitioner Exam Guide", url: "https://aws.amazon.com/certification/certified-cloud-practitioner/" },
+            { title: "AWS Certified Cloud Practitioner Sample Questions", url: "https://aws.amazon.com/certification/certified-cloud-practitioner/" },
+            { title: "AWS Cloud Practitioner Essentials (Free Course)", url: "https://www.aws.training/Details/Curriculum?id=27076" },
+            { title: "AWS Whitepapers and Documentation", url: "https://aws.amazon.com/whitepapers/" },
+            { title: "Youtube course", url: " https://www.youtube.com/watch?v=SOTamWNgDKc&t=2213s"},
+            { title: "Practice Exams", url: "https://app.exampro.co/student/journey/clf-c01"},
+            // Add more resources here
+        ];
+
+        const resourcesDiv = document.getElementById("resources");
+
+        displayResources(examResources);
+
+        function displayResources(resources) {
+            resources.forEach(resource => {
+                const resourceLink = document.createElement("a");
+                resourceLink.href = resource.url;
+                resourceLink.textContent = resource.title;
+                resourceLink.target = "_blank"; // Open link in a new tab
+                resourceLink.classList.add("resource-link");
+
+                resourcesDiv.appendChild(resourceLink);
+            });
+        }
+    </script>
+</body>
+</html>
